@@ -1,0 +1,163 @@
+/* Import Google font -  open Sans*/
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Josefin Sans", "Gill Sans", "Gill Sans MT", Calibri,"Trebuchet MS", sans-serif;
+}
+html1{
+    scroll-behavior: smooth;
+}
+/*Body part*/
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.box img{
+    height: 100px;
+    width: 200px;
+}
+.container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box-1 .happy{
+    color: black;
+    font-size: 2rem;
+    margin-left: 100px;
+    animation: slideTop 1s ease forwards;
+    
+}
+.box-1 .birthday{
+    color: blue;
+    font-size: 4rem;
+    margin-left: 20px;
+    animation: slideTop 1s ease forwards;
+
+}
+.box-1 .coma{
+    color: blue;
+    font-size: 4rem;
+    margin-left: 150px;
+    animation: slideBottom 1s ease forwards;
+}
+
+.box-1 p{
+    font-size: 1.5rem;
+    margin-left: 60px;
+    animation: slideLeft 1s ease forwards;
+}
+.box-1 img{
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-left: 70px;
+    margin-top: 20px;
+    animation: move 5s infinite;
+}
+.box-2 img{
+    height: 400px;
+    width: 400px;
+    animation: slideRight 1s ease forwards;
+}
+.name{
+    width: 400px;
+    background-color: blue;
+}
+.name:hover{
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px rgb(99, 57, 2);
+}
+.box-2 h2 {
+    
+    color: whitesmoke;
+    
+    margin-left: 70px;
+}
+.box-2 span{
+    
+    color: whitesmoke;
+    
+    margin-left: 60px;
+}
+footer a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5rem;
+    font-weight: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer a:hover{
+text-decoration: underline;
+color: black;
+}
+/*animation*/
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;  
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(10px, 0); }
+    50% { transform: translate(10px, 10px); }
+    75% { transform: translate(0, 10px); }
+    100% { transform: translate(0,  0); }
+}
+/*media queries*/
+/* Small screens (mobile devices) */
+@media (max-width: 767px) {
+    /* Styles for screens smaller than 767px */
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .box-1 .box-2{
+        flex-grow: 1;
+    }
+}
